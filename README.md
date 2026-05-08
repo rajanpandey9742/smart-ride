@@ -1,44 +1,17 @@
 # Smart Ride Assignment System 🚗
 
-## The Problem That Started This
-
-One morning I was waiting for a college ride. The nearest driver to me 
-ignored my request and drove right past me. The system then assigned a 
-driver who was much farther away — by the time they arrived, I was late 
-to class.
-
-That one experience made me ask: why did the nearest driver get assigned 
-if they weren't going to accept it? And why doesn't the system account 
-for anything other than distance?
-
-So I built a smarter system.
-
----
-
-## What This System Does Differently
-
-Most basic ride systems just pick the nearest driver. That's it.
-
-This system scores every available driver using a custom algorithm:
-score = distance_to_student + (passengers_onboard × 1.5)
-
-A driver 0.5 km away with 3 passengers already onboard scores 5.0.
-A driver 1.2 km away with 0 passengers scores 1.2.
-
-The emptier, more available driver wins — even if they're a little farther.
-The goal is to assign the driver most likely to actually show up on time.
-
----
+A real-time ride assignment backend system built with Python and FastAPI.
+The system automatically finds and assigns the best available driver to a 
+student based on distance, current passengers, and availability — then 
+instantly notifies the driver via WebSocket.
 
 ## Features
 
 - Smart driver scoring algorithm (not just nearest — optimized)
-- Real-time WebSocket notifications pushed instantly to drivers
+- Real-time WebSocket notifications to drivers
 - REST API with auto-generated documentation
-- Haversine formula for accurate GPS distance on Earth's surface
+- Haversine formula for accurate GPS distance calculation
 - Live driver connection tracking
-
----
 
 ## Tech Stack
 
@@ -49,8 +22,6 @@ The goal is to assign the driver most likely to actually show up on time.
 | Algorithm | Haversine formula, custom scoring |
 | Server | Uvicorn (ASGI) |
 | API Docs | Swagger UI (auto-generated) |
-
----
 
 ## System Flow
 Student requests ride
