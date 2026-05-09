@@ -1,5 +1,8 @@
 # Smart Ride Assignment System 🚗
 
+## 🚀 Live Demo
+API Docs: https://smart-ride-sxml.onrender.com/docs
+
 A real-time ride assignment backend system built with Python and FastAPI.
 The system automatically finds and assigns the best available driver to a 
 student based on distance, current passengers, and availability — then 
